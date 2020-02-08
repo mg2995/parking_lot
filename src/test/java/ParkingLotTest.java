@@ -1,10 +1,10 @@
-import com.gojek.parkingLot.exceptions.ParkingException;
-import com.gojek.parkingLot.models.Vehicle;
-import com.gojek.parkingLot.models.VehicleFactory;
-import com.gojek.parkingLot.models.VehicleType;
-import com.gojek.parkingLot.resource.ParkingManager;
-import com.gojek.parkingLot.resource.ParkingManagerImp;
-import com.gojek.parkingLot.responses.ParkingStatusResponse;
+import com.gojek.parkinglot.exceptions.ParkingException;
+import com.gojek.parkinglot.models.Vehicle;
+import com.gojek.parkinglot.models.VehicleFactory;
+import com.gojek.parkinglot.models.VehicleType;
+import com.gojek.parkinglot.resource.ParkingManager;
+import com.gojek.parkinglot.resource.ParkingManagerImp;
+import com.gojek.parkinglot.responses.ParkingStatusResponse;
 
 import org.junit.Before;
 import org.junit.Test;
