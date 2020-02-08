@@ -19,15 +19,15 @@ public abstract class Vehicle {
         this.type = type;
     }
 
-    String getColor() {
+    public String getColor() {
         return color;
     }
 
-    String getRegistrationNo() {
+    public String getRegistrationNo() {
         return registrationNo;
     }
 
-    VehicleType getVehicleType(){
+    public VehicleType getVehicleType(){
         return type;
     }
 }

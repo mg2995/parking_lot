@@ -6,16 +6,15 @@ import com.gojek.parkingLot.models.Vehicle;
 import com.gojek.parkingLot.responses.ParkingStatusResponse;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ParkingManager {
     int park(Vehicle vehicle) throws ParkingException;
-    int leave(int slot);
+    boolean leave(int slot) throws ParkingException;
     int getNearestAvailableSlot();
-    List<Integer> getAllAvailableSlots();
-    List<Integer> getAllOccupiedSlots();
-    List<String> getRegistrationNumber(String color) throws ParkingException;
-    Integer getCarSlot(String registrationNo) throws ParkingException;
-    List<Integer> getCarSlotsWithColor(String color) throws ParkingException;
     List<ParkingStatusResponse> getStatus() throws ParkingException;
+    Set<String> getRegistrationNumbers(String color) throws ParkingException;
+    Integer getCarSlot(String registrationNo) throws ParkingException;
+    List<Integer> getSlotsWithColor(String color) throws ParkingException;
 
 }

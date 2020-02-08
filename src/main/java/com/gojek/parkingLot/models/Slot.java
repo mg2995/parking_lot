@@ -4,7 +4,6 @@ public abstract class Slot {
     private final SlotType slotType; //Default value
     private final int number;
     private Vehicle vehicle = null;
-    private boolean isEmpty = true;
     private int charges = 10; //Default charge per hour
 
     private final static SlotType defaultSlotType = SlotType.Medium;
@@ -19,23 +18,24 @@ public abstract class Slot {
         this.slotType = slotType;
     }
 
-    Vehicle getVehicle(){
-        return this.vehicle;
+
+    public boolean isNotEmpty() {
+        return vehicle != null;
     }
-    boolean isEmpty(){
-        return  isEmpty;
-    }
+
     int getCharges(){
         return charges;
     }
-    int getNumber(){
+    public int getNumber(){
         return number;
     }
 
-    void setVehicle(Vehicle vehicle){
-
+    public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
-        isEmpty = (vehicle == null);
+    }
+
+    public Vehicle getVehicle() {
+        return vehicle;
     }
 
     void setCharges(int charges){

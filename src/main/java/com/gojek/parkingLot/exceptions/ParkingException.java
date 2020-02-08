@@ -7,4 +7,7 @@ public class ParkingException extends Exception{
     public ParkingException(String s){
         super(s);
     }
+    public ParkingException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }
